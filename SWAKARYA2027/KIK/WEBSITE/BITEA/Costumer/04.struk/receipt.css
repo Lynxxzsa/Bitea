@@ -1,0 +1,445 @@
+
+ * {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f3eee8;
+
+    color: #2d2119;
+}
+
+
+.receipt-page {
+    width: min(92%, 520px);
+
+    margin: 40px auto 60px;
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f3e9;
+
+    color: #3e7b46;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.success h1 {
+    margin: 15px 0 7px;
+
+    font-size: 26px;
+}
+
+
+.success p {
+    margin: 0;
+
+    color: #81766e;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RECEIPT
+========================= */
+
+.receipt {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(50, 35, 25, 0.09);
+}
+
+
+/* HEADER */
+
+.receipt-header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.receipt-header h2 {
+    margin: 0;
+
+    letter-spacing: 5px;
+
+    font-size: 25px;
+}
+
+
+.receipt-header p {
+    margin: 7px 0 0;
+
+    color: #897b70;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* INFO */
+
+.order-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.order-info div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.order-info span,
+.customer-info span,
+.payment-info span {
+    color: #93877e;
+
+    font-size: 12px;
+}
+
+
+.order-info strong {
+    font-size: 13px;
+}
+
+
+hr {
+    border: none;
+
+    border-top:
+        1px dashed #ded5cd;
+
+    margin:
+        23px 0;
+}
+
+
+/* CUSTOMER */
+
+.customer-info h3,
+.products h3 {
+    margin:
+        0 0 15px;
+
+    font-size: 15px;
+}
+
+
+.customer-info p,
+.payment-info p {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin:
+        10px 0;
+}
+
+
+.customer-info strong,
+.payment-info strong {
+    font-size: 13px;
+}
+
+
+/* PRODUCTS */
+
+.product {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.product div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.product small {
+    color: #8c8179;
+
+    font-size: 12px;
+}
+
+
+.product > strong {
+    font-size: 13px;
+}
+
+
+/* TOTAL */
+
+.total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.total span {
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+.total strong {
+    font-size: 21px;
+
+    color: #795438;
+}
+
+
+/* PAYMENT */
+
+.payment-info {
+    margin-top: 22px;
+
+    padding:
+        15px;
+
+    border-radius:
+        12px;
+
+    background:
+        #f8f5f2;
+}
+
+
+.paid {
+    color: #3e7b46;
+}
+
+
+/* FOOTER */
+
+.receipt-footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid #eee8e3;
+}
+
+
+.receipt-footer p {
+    margin: 0 0 8px;
+
+    color: #968b83;
+
+    font-size: 11px;
+}
+
+
+.receipt-footer strong {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.actions button {
+    flex: 1;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+.primary-button {
+    border: none;
+
+    background: #795438;
+
+    color: white;
+}
+
+
+.secondary-button {
+    border:
+        1px solid #d8cec5;
+
+    background: white;
+
+    color: #4b3a2d;
+}
+
+
+.next-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+.next-actions button {
+    flex: 1;
+
+    padding: 12px;
+
+    border:
+        1px solid #ddd3ca;
+
+    border-radius: 11px;
+
+    background: white;
+
+    cursor: pointer;
+
+    color: #604632;
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+
+    .receipt-page {
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    .success {
+        margin-bottom: 15px;
+    }
+
+
+    .actions,
+    .next-actions {
+        display: none;
+    }
+
+
+    .receipt {
+        box-shadow: none;
+
+        border:
+            1px solid #ddd;
+
+        border-radius: 0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .receipt {
+        padding: 22px;
+    }
+
+
+    .order-info {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .actions {
+        flex-direction:
+            column;
+    }
+
+}

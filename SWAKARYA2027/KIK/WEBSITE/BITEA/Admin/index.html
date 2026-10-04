@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        BITEA - Admin Dashboard
+    </title>
+
+    <!-- Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+    <div class="sidebar-logo">
+
+        <div class="logo-mark">
+            BITEA
+        </div>
+
+        <span>
+            • ADMIN PANEL •
+        </span>
+
+    </div>
+
+
+    <!-- Navigasi -->
+    <nav class="sidebar-nav">
+
+        <a
+            href="#"
+            class="nav-item active"
+        >
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ▣
+            </span>
+
+            <span>
+                Riwayat Pembelian
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ≡
+            </span>
+
+            <span>
+                Menu
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ◈
+            </span>
+
+            <span>
+                Kategori
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ♙
+            </span>
+
+            <span>
+                Pelanggan
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ▤
+            </span>
+
+            <span>
+                Pembayaran
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ☆
+            </span>
+
+            <span>
+                Rating & Ulasan
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ▣
+            </span>
+
+            <span>
+                Photobooth
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ▥
+            </span>
+
+            <span>
+                Laporan
+            </span>
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+            <span class="nav-icon">
+                ⚙
+            </span>
+
+            <span>
+                Pengaturan
+            </span>
+        </a>
+
+    </nav>
+
+
+    <!-- Dekorasi sidebar -->
+    <div class="sidebar-decoration">
+
+        <div class="decoration-brand">
+            BITEA
+        </div>
+
+        <p>
+            Good Food,
+            <br>
+            Good Mood.
+        </p>
+
+        <div class="decoration-cup">
+            ☕
+        </div>
+
+    </div>
+
+
+    <!-- Logout -->
+    <button class="logout-button">
+
+        <span>
+            ↪
+        </span>
+
+        Logout
+
+    </button>
+
+</aside>
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main class="main-content">
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <p>
+                Selamat datang kembali, Admin! 👋
+            </p>
+
+        </div>
+
+
+        <!-- Informasi waktu -->
+        <div class="header-info">
+
+            <div class="header-info-item">
+
+                <span>
+                    ◫
+                </span>
+
+                <div>
+
+                    <strong id="currentDate">
+                        Kamis, 22 Mei 2025
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-divider"></div>
+
+
+            <div class="header-info-item">
+
+                <span>
+                    ◷
+                </span>
+
+                <strong id="currentTime">
+                    10:24:36 WIB
+                </strong>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         TOP CONTENT
+    ========================= -->
+
+    <section class="top-grid">
+
+
+        <!-- =========================
+             KONTROL PRODUK
+        ========================= -->
+
+        <div class="card product-control-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Kontrol Produk
+                    </h2>
+
+                    <p>
+                        Kelola ketersediaan menu
+                    </p>
+
+                </div>
+
+                <button class="text-button">
+                    Lihat Semua →
+                </button>
+
+            </div>
+
+
+            <div class="control-list">
+
+
+                <div class="control-item">
+
+                    <div class="control-product">
+
+                        <div class="mini-product">
+                            <img
+                                src="assets/products/choco-bite.png"
+                                alt=""
+                            >
+                        </div>
+
+                        <strong>
+                            Choco Bite
+                        </strong>
+
+                    </div>
+
+                    <span class="available">
+                        Tersedia
+                    </span>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="control-item">
+
+                    <div class="control-product">
+
+                        <div class="mini-product">
+                            <img
+                                src="assets/products/brown-tea.png"
+                                alt=""
+                            >
+                        </div>
+
+                        <strong>
+                            Brown Tea
+                        </strong>
+
+                    </div>
+
+                    <span class="available">
+                        Tersedia
+                    </span>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="control-item">
+
+                    <div class="control-product">
+
+                        <div class="mini-product">
+                            <img
+                                src="assets/products/matcha-bite.png"
+                                alt=""
+                            >
+                        </div>
+
+                        <strong>
+                            Matcha Bite
+                        </strong>
+
+                    </div>
+
+                    <span class="available">
+                        Tersedia
+                    </span>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="control-item">
+
+                    <div class="control-product">
+
+                        <div class="mini-product">
+                            <img
+                                src="assets/products/red-velvet.png"
+                                alt=""
+                            >
+                        </div>
+
+                        <strong>
+                            Red Velvet
+                        </strong>
+
+                    </div>
+
+                    <span class="unavailable">
+                        Tidak Tersedia
+                    </span>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             MENU TERLARIS
+        ========================= -->
+
+        <div class="card best-menu-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Menu Terlaris
+                    </h2>
+
+                    <p>
+                        Produk paling banyak dibeli
+                    </p>
+
+                </div>
+
+
+                <button class="text-button">
+                    Lihat Semua →
+                </button>
+
+            </div>
+
+
+            <div class="best-menu-list">
+
+
+                <!-- Produk 1 -->
+                <div class="best-menu-item">
+
+                    <div class="rank rank-one">
+                        1
+                    </div>
+
+                    <div class="product-image">
+                        <img
+                            src="assets/products/choco-bite.png"
+                            alt="Choco Bite"
+                        >
+                    </div>
+
+                    <div class="product-info">
+
+                        <strong>
+                            Choco Bite
+                        </strong>
+
+                        <div class="product-meta">
+
+                            <span>
+                                128 Terjual
+                            </span>
+
+                            <span>
+                                35%
+                            </span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-fill"
+                                style="width: 35%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Produk 2 -->
+                <div class="best-menu-item">
+
+                    <div class="rank">
+                        2
+                    </div>
+
+                    <div class="product-image">
+                        <img
+                            src="assets/products/brown-tea.png"
+                            alt="Brown Tea"
+                        >
+                    </div>
+
+                    <div class="product-info">
+
+                        <strong>
+                            Brown Tea
+                        </strong>
+
+                        <div class="product-meta">
+
+                            <span>
+                                96 Terjual
+                            </span>
+
+                            <span>
+                                26%
+                            </span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-fill"
+                                style="width: 26%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Produk 3 -->
+                <div class="best-menu-item">
+
+                    <div class="rank">
+                        3
+                    </div>
+
+                    <div class="product-image">
+                        <img
+                            src="assets/products/red-velvet.png"
+                            alt="Red Velvet"
+                        >
+                    </div>
+
+                    <div class="product-info">
+
+                        <strong>
+                            Red Velvet
+                        </strong>
+
+                        <div class="product-meta">
+
+                            <span>
+                                74 Terjual
+                            </span>
+
+                            <span>
+                                20%
+                            </span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-fill"
+                                style="width: 20%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Produk 4 -->
+                <div class="best-menu-item">
+
+                    <div class="rank">
+                        4
+                    </div>
+
+                    <div class="product-image">
+                        <img
+                            src="assets/products/brown-tea.png"
+                            alt="Lemon Tea"
+                        >
+                    </div>
+
+                    <div class="product-info">
+
+                        <strong>
+                            Lemon Tea
+                        </strong>
+
+                        <div class="product-meta">
+
+                            <span>
+                                50 Terjual
+                            </span>
+
+                            <span>
+                                13%
+                            </span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-fill"
+                                style="width: 13%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             RINGKASAN HARI INI
+        ========================= -->
+
+        <div class="card summary-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Ringkasan Hari Ini
+                    </h2>
+
+                    <p>
+                        Performa penjualan hari ini
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- KPI -->
+            <div class="summary-kpis">
+
+
+                <div class="summary-kpi">
+
+                    <div class="kpi-icon">
+                        Rp
+                    </div>
+
+                    <span>
+                        Total Pendapatan
+                    </span>
+
+                    <strong>
+                        Rp 2.350.000
+                    </strong>
+
+                    <small>
+                        ↑ 18.6% dari kemarin
+                    </small>
+
+                </div>
+
+
+                <div class="summary-kpi">
+
+                    <div class="kpi-icon">
+                        ♙
+                    </div>
+
+                    <span>
+                        Pembeli Baru
+                    </span>
+
+                    <strong>
+                        48
+                    </strong>
+
+                    <small>
+                        ↑ 12.5% dari kemarin
+                    </small>
+
+                </div>
+
+
+                <div class="summary-kpi">
+
+                    <div class="kpi-icon">
+                        ▣
+                    </div>
+
+                    <span>
+                        Total Pesanan
+                    </span>
+
+                    <strong>
+                        86
+                    </strong>
+
+                    <small>
+                        ↑ 14.0% dari kemarin
+                    </small>
+
+                </div>
+
+
+                <div class="summary-kpi">
+
+                    <div class="kpi-icon">
+                        ↗
+                    </div>
+
+                    <span>
+                        Rata-rata Pesanan
+                    </span>
+
+                    <strong>
+                        Rp 27.325
+                    </strong>
+
+                    <small>
+                        ↑ 8.3% dari kemarin
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Pembayaran -->
+            <div class="payment-summary">
+
+                <div class="payment-item">
+
+                    <div class="payment-icon cash">
+                        Rp
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Pembayaran Cash
+                        </span>
+
+                        <strong>
+                            35
+                        </strong>
+
+                        <small>
+                            pesanan
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-item">
+
+                    <div class="payment-icon qris">
+                        QR
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Pembayaran QRIS
+                        </span>
+
+                        <strong>
+                            51
+                        </strong>
+
+                        <small>
+                            pesanan
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SECOND CONTENT
+    ========================= -->
+
+    <section class="bottom-grid">
+
+        <!-- =========================
+             RIWAYAT PEMBELIAN
+        ========================= -->
+
+        <div class="card history-card">
+
+            <div class="card-header">
+
+                <h2>
+                    Riwayat Pembelian
+                </h2>
+
+                <button class="text-button">
+                    Lihat Semua →
+                </button>
+
+            </div>
+
+            <div class="history-list">
+
+                <div class="history-item">
+                    <div class="order-id">#BTE-20260905-001</div>
+                    <div class="customer">Budi Santoso</div>
+                    <div class="total">Rp 75.000</div>
+                    <div class="status delivered">Selesai</div>
+                    <div class="date">2026-09-05 14:45</div>
+                </div>
+
+                <div class="history-item">
+                    <div class="order-id">#BTE-20260905-002</div>
+                    <div class="customer">Siti Rahma</div>
+                    <div class="total">Rp 48.000</div>
+                    <div class="status pending">Menunggu</div>
+                    <div class="date">2026-09-05 14:30</div>
+                </div>
+
+                <div class="history-item">
+                    <div class="order-id">#BTE-20260905-003</div>
+                    <div class="customer">Adit Nugraha</div>
+                    <div class="total">Rp 120.000</div>
+                    <div class="status cancelled">Dibatalkan</div>
+                    <div class="date">2026-09-05 13:55</div>
+                </div>
+
+                <div class="history-item">
+                    <div class="order-id">#BTE-20260905-004</div>
+                    <div class="customer">Hafizh A.</div>
+                    <div class="total">Rp 32.000</div>
+                    <div class="status delivered">Selesai</div>
+                    <div class="date">2026-09-05 13:10</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RATING
+        ========================= -->
+
+        <div class="card rating-card">
+
+            <div class="card-header">
+
+                <h2>
+                    Rating & Ulasan
+                </h2>
+
+                <button class="text-button">
+                    Lihat Semua →
+                </button>
+
+            </div>
+
+
+            <div class="rating-overview">
+
+                <div class="rating-score">
+                    4.8
+                </div>
+
+                <div>
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <span>
+                        dari 128 ulasan
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-list">
+
+                <div class="review-item">
+
+                    <div class="avatar">
+                        H
+                    </div>
+
+                    <div class="review-content">
+
+                        <strong>
+                            Hafizh A.
+                        </strong>
+
+                        <p>
+                            Enak banget, packaging juga lucu!
+                        </p>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <div class="review-item">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div class="review-content">
+
+                        <strong>
+                            Adit Nugraha
+                        </strong>
+
+                        <p>
+                            Brown Tea paling favorit!
+                        </p>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <div class="review-item">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div class="review-content">
+
+                        <strong>
+                            Siti Nurhaliza
+                        </strong>
+
+                        <p>
+                            Pelayanan cepat dan ramah.
+                        </p>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             FEEDBACK
+        ========================= -->
+
+        <div class="card feedback-card">
+
+            <div class="card-header">
+
+                <h2>
+                    Feedback Terbaru
+                </h2>
+
+                <button class="text-button">
+                    Lihat Semua →
+                </button>
+
+            </div>
+
+
+            <div class="feedback-list">
+
+
+                <div class="feedback-item">
+
+                    <div class="feedback-icon positive">
+                        ✓
+                    </div>
+
+                    <div class="feedback-content">
+
+                        <strong>
+                            Makanannya enak semua!
+                        </strong>
+
+                        <p>
+                            Pertahankan rasa & kualitasnya.
+                        </p>
+
+                    </div>
+
+                    <span class="feedback-label">
+                        Pujian
+                    </span>
+
+                </div>
+
+
+                <div class="feedback-item">
+
+                    <div class="feedback-icon suggestion">
+                        !
+                    </div>
+
+                    <div class="feedback-content">
+
+                        <strong>
+                            Tambahkan varian matcha
+                        </strong>
+
+                        <p>
+                            Kalau bisa lebih banyak pilihan.
+                        </p>
+
+                    </div>
+
+                    <span class="feedback-label">
+                        Saran
+                    </span>
+
+                </div>
+
+
+                <div class="feedback-item">
+
+                    <div class="feedback-icon comment">
+                        i
+                    </div>
+
+                    <div class="feedback-content">
+
+                        <strong>
+                            Proses pesanan cepat.
+                        </strong>
+
+                        <p>
+                            Terima kasih!
+                        </p>
+
+                    </div>
+
+                    <span class="feedback-label">
+                        Komentar
+                    </span>
+
+                </div>
+
+
+                <div class="feedback-item">
+
+                    <div class="feedback-icon complaint">
+                        !
+                    </div>
+
+                    <div class="feedback-content">
+
+                        <strong>
+                            Tunggu agak lama.
+                        </strong>
+
+                        <p>
+                            Tapi rasanya worth it.
+                        </p>
+
+                    </div>
+
+                    <span class="feedback-label">
+                        Keluhan
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER BANNER
+    ========================= -->
+
+    <section class="motivation-banner">
+
+        <div>
+
+            <span>
+                BITEA
+            </span>
+
+            <h3>
+                Good Food, Good Mood.
+            </h3>
+
+            <p>
+                Terus berikan yang terbaik untuk setiap pesanan.
+            </p>
+
+        </div>
+
+
+        <div class="banner-icon">
+            ☕
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

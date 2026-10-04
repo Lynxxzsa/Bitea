@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITEA - SWAKARYA 2027</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #fff8e8;
+            --orange: #ff7b3d;
+            --pink: #f4518c;
+            --purple: #573b8f;
+            --ink: #241b35;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+            color: var(--cream);
+            background: var(--purple);
+            font-family: "Nunito Sans", Arial, sans-serif;
+        }
+
+        .background-video {
+            position: fixed;
+            z-index: -3;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: var(--purple);
+        }
+
+        .video-overlay {
+            position: fixed;
+            z-index: -2;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(36, 27, 53, .68), rgba(87, 59, 143, .55));
+        }
+
+        body::before,
+        body::after {
+            position: fixed;
+            z-index: -1;
+            width: 42vw;
+            height: 42vw;
+            border-radius: 50%;
+            content: "";
+            filter: blur(12px);
+            opacity: .75;
+            animation: float 12s ease-in-out infinite alternate;
+        }
+
+        body::before {
+            top: -12vw;
+            left: -8vw;
+            background: var(--orange);
+        }
+
+        body::after {
+            right: -10vw;
+            bottom: -15vw;
+            background: var(--pink);
+            animation-delay: -4s;
+        }
+
+        .background-shape {
+            position: fixed;
+            z-index: -1;
+            width: 24vw;
+            height: 24vw;
+            border: 2px solid rgba(255, 248, 232, .22);
+            border-radius: 42% 58% 65% 35%;
+            animation: spin 18s linear infinite;
+        }
+
+        .shape-one {
+            top: 12%;
+            right: 12%;
+        }
+
+        .shape-two {
+            bottom: 8%;
+            left: 14%;
+            animation-direction: reverse;
+            animation-duration: 24s;
+        }
+
+        main {
+            position: relative;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(36, 27, 53, .3), rgba(87, 59, 143, .46));
+        }
+
+        .content {
+            width: min(100%, 680px);
+            padding: clamp(32px, 7vw, 76px);
+            border: 1px solid rgba(255, 248, 232, .3);
+            border-radius: 32px;
+            background: rgba(36, 27, 53, .3);
+            box-shadow: 0 24px 70px rgba(20, 10, 35, .28);
+            backdrop-filter: blur(12px);
+            animation: appear .9s ease-out both;
+        }
+
+        .sound-button {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 1;
+            padding: 11px 17px;
+            border: 1px solid rgba(255, 248, 232, .45);
+            border-radius: 999px;
+            color: var(--cream);
+            background: rgba(36, 27, 53, .62);
+            cursor: pointer;
+            font: inherit;
+            font-size: .8rem;
+            letter-spacing: .05em;
+            backdrop-filter: blur(8px);
+        }
+
+        .sound-button:hover,
+        .sound-button:focus-visible {
+            background: rgba(36, 27, 53, .85);
+        }
+
+        .sound-button:focus-visible {
+            outline: 3px solid var(--cream);
+            outline-offset: 3px;
+        }
+
+        .school {
+            margin: 28px 0 0;
+            color: rgba(255, 248, 232, .62);
+            font-size: .72rem;
+            font-weight: bold;
+            letter-spacing: .25em;
+        }
+
+        .event-name {
+            margin: 8px 0 0;
+            color: rgba(255, 213, 166, .85);
+            font-size: .72rem;
+            font-weight: bold;
+            letter-spacing: .22em;
+        }
+
+        h1 {
+            margin: 0;
+            color: transparent;
+            background: linear-gradient(110deg, #fff8e8 15%, #ffd5a6 42%, #fff 50%, #ff9d69 62%, #fff8e8 85%);
+            background-size: 220% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(3.6rem, 12vw, 7rem);
+            font-weight: 900;
+            letter-spacing: .02em;
+            line-height: .9;
+            text-shadow: 0 0 12px rgba(255, 213, 166, .52), 0 0 34px rgba(255, 123, 61, .28);
+            animation: text-glow 4s linear infinite;
+        }
+
+        h2 {
+            margin: 18px 0 24px;
+            color: rgba(255, 248, 232, .72);
+            font-size: clamp(.85rem, 2.5vw, 1.1rem);
+            font-weight: 600;
+            letter-spacing: .2em;
+        }
+
+        .tagline {
+            margin: 0 0 36px;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            letter-spacing: .08em;
+        }
+
+        .order-button {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            display: inline-block;
+            padding: 17px 32px;
+            border: 1px solid rgba(255, 255, 255, .55);
+            border-radius: 999px;
+            color: var(--ink);
+            background: linear-gradient(120deg, var(--cream), #ffd5a6);
+            font-weight: bold;
+            letter-spacing: .1em;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 123, 61, .28);
+            transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+        }
+
+        .order-button::after {
+            position: absolute;
+            z-index: -1;
+            top: -120%;
+            left: -45%;
+            width: 34%;
+            height: 340%;
+            background: rgba(255, 255, 255, .72);
+            content: "";
+            transform: rotate(24deg);
+            transition: left .6s ease;
+        }
+
+        .order-button:hover,
+        .order-button:focus-visible {
+            background: linear-gradient(120deg, #ffd5a6, var(--cream));
+            box-shadow: 0 16px 38px rgba(255, 123, 61, .42);
+            transform: translateY(-5px) scale(1.03);
+        }
+
+        .order-button:hover::after,
+        .order-button:focus-visible::after {
+            left: 125%;
+        }
+
+        .order-button:focus-visible {
+            outline: 3px solid var(--cream);
+            outline-offset: 5px;
+        }
+
+        @keyframes float {
+            to {
+                transform: translate(8vw, 10vh) scale(1.15);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(24px) scale(.97);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes text-glow {
+            to {
+                background-position: 220% center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Opening Website -->
+
+    <video class="background-video" autoplay loop muted playsinline preload="auto"
+        aria-hidden="true">
+        <!-- Ganti file ini dengan video background produk yang digunakan. -->
+        <source src="../assets/background.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay" aria-hidden="true"></div>
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main>
+        <section class="content" aria-labelledby="page-title">
+            <h1 id="page-title">BITEA</h1>
+            <h2>RASA YANG BIKIN CERITA</h2>
+            <p class="tagline">Pesan. Nikmati. Abadikan.</p>
+            <a class="order-button" href="../02.menu/menu.html">PESAN DI SINI</a>
+            <p class="school">SMK AL-FALAH</p>
+            <p class="event-name">SWAKARYA 2027</p>
+        </section>
+
+    </main>
+    <button class="sound-button" type="button" aria-pressed="false">
+        Aktifkan suara
+    </button>
+
+    <script>
+        const video = document.querySelector('.background-video');
+        const soundButton = document.querySelector('.sound-button');
+
+        soundButton.addEventListener('click', () => {
+            video.muted = !video.muted;
+            soundButton.textContent = video.muted ? 'Aktifkan suara' : 'Matikan suara';
+            soundButton.setAttribute('aria-pressed', String(!video.muted));
+        });
+
+        video.play().catch(() => {
+            // Playback can wait for the browser's autoplay policy.
+        });
+    </script>
+
+</body>
+
+</html>
